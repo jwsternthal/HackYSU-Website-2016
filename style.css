@@ -1,3 +1,13 @@
+
+*, *:after, *:before  {
+outline: none;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+padding:0;
+margin:0;
+}
+
 html {
 	text-align: center;
 	color: #191d29;
@@ -76,17 +86,9 @@ a:hover {
 	width: 100%;
 	height: 8em;
 	transform: skewY(-2deg);
+	-moz-transform: skewY(-2deg);
+	-webkit-transform: skewY(-2deg);
 	background-color: #191d29;
-}
-
-.left {
-	padding-left: 4em;
-	margin-left: -2em;
-}
-
-.right {
-	padding-right: 4em;
-	margin-right: -2em;
 }
 
 .content:after {
@@ -99,6 +101,8 @@ a:hover {
 	width: 100%;
 	height: 8em;
 	transform: skewY(-2deg);
+	-moz-transform: skewY(-2deg);
+	-webkit-transform: skewY(-2deg);
 	background-color: #191d29;
 }
 
@@ -145,6 +149,7 @@ a:hover {
 .active .icon {
 	transform: scale(0.75) rotate(-90deg);
 	-moz-transform: scale(0.75) rotate(-90deg);
+	-webkit-transform: scale(0.75) rotate(-90deg);
 }
 
 .clear {
@@ -180,6 +185,24 @@ a:hover {
 	font-size: 2em;
 }
 
-.social .icon:hover {
-	font-size: 2.5em;
+@media screen and (min-width: 1024px) {
+	.left {
+		padding-left: 4em;
+		margin-left: -2em;
+	}
+
+	.right {
+		padding-right: 4em;
+		margin-right: -2em;
+	}
+}
+
+@media screen and (max-width: 1023px) {
+	html {
+		size: .8em;
+	}
+	
+	.faqItem {
+		margin: 1em;
+	}
 }
