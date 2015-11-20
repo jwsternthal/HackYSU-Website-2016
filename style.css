@@ -1,4 +1,4 @@
-html, body {
+html {
 	text-align: center;
 	color: #191d29;
 	background-color: #535d69;
@@ -8,6 +8,7 @@ html, body {
 
 p {
 	font-family: 'Open Sans';
+	font-size: 1.2em;
 }
 
 h1 {
@@ -33,10 +34,12 @@ a {
 	color: #fff;
 	text-decoration: none;
 	padding-top: 20px;
+	text-shadow: 1px 3px 5px #000;
 }
 
 a:hover {
 	padding-top: 0px;
+	color: #f05c2d;
 }
 
 #header { 
@@ -94,8 +97,9 @@ a:hover {
 	background-color: #191d29;
 }
 
-.content > div > div {
-	transform: rotate(-2deg);
+.content > h2 {
+	color: #f05c2d;
+	margin-bottom: 1em;
 }
 
 #top {
@@ -107,10 +111,25 @@ a:hover {
 	max-width: 30em;
 }
 
-.pure-g {
-	margin-top: 2em;
+.faqItem {
+	transition: all 0.2s;
+	cursor: pointer;
+	margin: 1em 3em;
+}
+
+.faqItem:hover {
+	color: #ccc;
+}
+
+.clear {
+	clear: both;
 }
 
 #social .icon {
 	margin: 0.5em;
+	font-size: 2em;
+}
+/*
+#social .icon:hover {
+	font-size: 1.5em;
 }
