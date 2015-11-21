@@ -180,7 +180,19 @@ a:hover {
 	padding: 0.5em 1.5em;
 }
 
+#map {
+	display: block;
+	width: 100%;
+	height: 40em;
+	max-width: 800px;
+	padding: 1em;
+	margin: auto;
+	background-color: #fff;
+	box-shadow: 1px 3px 7px #000;
+}
+
 .social .icon {
+	display: inline-block;
 	margin: 0.5em;
 	font-size: 2em;
 }
@@ -198,11 +210,34 @@ a:hover {
 }
 
 @media screen and (max-width: 1023px) {
-	html {
-		size: .8em;
-	}
-	
 	.faqItem {
 		margin: 1em;
+	}
+	
+	.time h3 {
+		float: none;
+	}
+	
+	#map {
+		height: 20em;
+	}
+	
+	.social .icon {
+		display: inline-block;
+		margin: 0.5em;
+	}
+	
+	#quickinfo {
+		font-size: .8em;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	html {
+		font-size: .8em;
+	}
+	
+	.social .icon {
+		font-size: 1em;
 	}
 }
