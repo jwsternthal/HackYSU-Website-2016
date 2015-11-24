@@ -1,11 +1,11 @@
 
 *, *:after, *:before  {
 outline: none;
--webkit-box-sizing: border-box;
--moz-box-sizing: border-box;
-box-sizing: border-box;
-padding:0;
-margin:0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding:0;
+	margin:0;
 }
 
 html {
@@ -40,6 +40,7 @@ h3 {
 }
 
 a {
+	display: inline-block;
 	transition: all 0.2s;
 	color: #fff;
 	text-decoration: none;
@@ -59,8 +60,11 @@ a:hover {
 }
 
 #header a {
-	display: inline-block;
 	margin: 0 .5em;
+}
+
+.tag {
+	height: 1px;
 }
 
 .content:first-of-type {
@@ -71,7 +75,7 @@ a:hover {
 	position: relative;
 	z-index: 2;
 	width: 90%;
-	margin: 12em auto;
+	margin: 6em auto;
 	padding: 2em;
 	background-color: #191d29;
 	color: #535d69;
@@ -171,12 +175,12 @@ a:hover {
 }
 
 .time h3 {
-	float: left;
+	position: absolute;
 	margin: 0.5em;
 }
 
 .time p {
-	margin: 0.5em;
+	margin: 0.5em 2em;
 	padding: 0.5em 1.5em;
 }
 
@@ -191,10 +195,33 @@ a:hover {
 	box-shadow: 1px 3px 7px #000;
 }
 
+.sponsor {
+	opacity: 0.8;
+	width: 10em;
+}
+
+.titleSponsor {
+	width: 15em;
+}
+
+.sponsor:hover {
+	opacity: 1;
+	margin: 0 0.5em;
+}
+
+.sponsor img {
+	width: 100%;
+}
+
 .social .icon {
 	display: inline-block;
 	margin: 0.5em;
 	font-size: 2em;
+}
+
+.social .icon:hover {
+	margin-left: 0.75em;
+	margin-right: 0.75em;
 }
 
 @media screen and (min-width: 1024px) {
@@ -207,6 +234,10 @@ a:hover {
 		padding-right: 4em;
 		margin-right: -2em;
 	}
+	
+	.time p {
+		
+	}
 }
 
 @media screen and (max-width: 1023px) {
@@ -215,6 +246,7 @@ a:hover {
 	}
 	
 	.time h3 {
+		position: relative;
 		float: none;
 	}
 	
@@ -223,8 +255,13 @@ a:hover {
 	}
 	
 	.social .icon {
-		display: inline-block;
+		font-size: 1.5em;
 		margin: 0.5em;
+	}
+	
+	.social .icon:hover {
+		margin-left: 0.6em;
+		margin-right: 0.6em;
 	}
 	
 	#quickinfo {
@@ -238,6 +275,21 @@ a:hover {
 	}
 	
 	.social .icon {
-		font-size: 1em;
+		margin: 0.25em;
+	}
+	
+	.social .icon:hover {
+		margin-left: 0.4em;
+		margin-right: 0.4em;
+	}
+}
+
+@media screen and (max-width: 380px) {
+	h2 {
+		font-size: 1.7em;
+	}
+	
+	.sponsor {
+		width: 10em;
 	}
 }
